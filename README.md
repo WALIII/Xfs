@@ -55,5 +55,8 @@ Clean ROIs based on a few criteria
 
 5. QUALITY CONTROL/ Pre-flight
 
+simple visuals can be found in SAMPLE.m
+
+
 
 6. ANALYSIS
