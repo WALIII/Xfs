@@ -1,4 +1,4 @@
-function [aligned_ROIs, foopsi_ROIs, sp_ROIs, GG_final, c_final,sp_final] = Xfs_ROI_extract(template,roi_ave)
+function [DAT] = Xfs_ROI_extract(template,roi_ave)
 % Xfs_ROI_extract.m
 
 % WAL3
@@ -62,11 +62,12 @@ end
 end
 
     disp('Saving Data');
-aligned_ROIs = GGfinal;
-foopsi_ROIs = GGfinal_foopsi;
-sp_ROIs = GGfinal_sp;
-GG_final = GG;
-c_final = c;
-sp_final = sp;
+    
+DAT.aligned_ROIs = GGfinal;
+DAT.foopsi_ROIs = GGfinal_foopsi;
+DAT.sp_ROIs = GGfinal_sp;
+DAT.GG_final = GG;
+DAT.c_final = c;
+DAT.sp_final = sp;
 
 

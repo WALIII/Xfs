@@ -2,7 +2,9 @@
 Freedomscope Analysis Pipeline for the Directed/Undirected project
 
 requires the following packages:
+
 FinchScope
+
 Find-audio
 
 
@@ -38,7 +40,20 @@ Clean ROIs based on a few criteria
 
 # Main Usage:
 
-4. Extract songs
+4. Move/separate data. Extract songs
+
 ```
->> Xfs_ROI_extract
+% Load in directed/undirected index ( in context_index.m)
+>> FS_Move(directed, undirected, type)
+% index into one of the folders:
+>> cd(directed);
+>> [DAT_d] = Xfs_ROI_extract(template,roi_ave)
+>> cd ..
+>> cd(undirected)
+>> [DAT_u] = Xfs_ROI_extract(template,roi_ave)
 ```
+
+5. QUALITY CONTROL/ Pre-flight
+
+
+6. ANALYSIS
