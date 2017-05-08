@@ -39,7 +39,7 @@ end
     disp('Extracting Data');
 for ii = 1:size(song_start,2);
     
-   
+    song(trial,:) = roi_ave.analogIO_dat{i}(song_start:
     %EXTRACT SONG TRIALS
 val = song_start(ii); %value to find
 tmp = abs(f-val);
@@ -55,8 +55,6 @@ for cell = 1:size(roi_ave.interp_dff,1); % extract for all cells
 GGfinal_foopsi(trial,:,cell) = (c{i}(closest-FrameIgnore:closest2-FrameIgnore,cell))-min(c{i}(closest-FrameIgnore:closest2-FrameIgnore,cell));
 GGfinal_sp(trial,:,cell) = (sp{i}(closest-FrameIgnore:closest2-FrameIgnore,cell))-min(sp{i}(closest-FrameIgnore:closest2-FrameIgnore,cell));
 end
-song(trial,:) = roi_ave.analogIO_dat{i}(song_start*fs:size(template,1));
-score{trail} = score_d;
 trial = trial+1; % increase trial number
 catch
     disp('too long');
@@ -76,6 +74,5 @@ DAT.sp_ROIs = GGfinal_sp;
 DAT.GG_final = GG;
 DAT.c_final = c;
 DAT.sp_final = sp;
-DAT.song = song;
-DAT.score = 
+
 
